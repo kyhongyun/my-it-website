@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="랜섬웨어 보호 99.5% 성공률의 Veeam, 아시아 1위 Alibaba Cloud 등 12개 프리미엄 IT 인프라 솔루션 제공. 무료 진단 체크리스트 다운로드">
+    <meta name="keywords" content="Veeam, Alibaba Cloud, HCI, 서버, 스토리지, NAS, 백업솔루션, 랜섬웨어보호, IT인프라">
+    <title>프리미엄 IT 인프라 솔루션 전문기업 | 엔터프라이즈 클라우드 & 보안</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="프리미엄 IT 인프라 솔루션 전문기업">
+    <meta property="og:description" content="랜섬웨어 보호 99.5% 성공률의 Veeam, 아시아 1위 Alibaba Cloud 등 검증된 솔루션">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23667eea" stop-opacity="0.3"/><stop offset="100%" stop-color="%23764ba2" stop-opacity="0.1"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"><animate attributeName="cx" values="200;800;200" dur="20s" repeatCount="indefinite"/></circle><circle cx="800" cy="300" r="80" fill="url(%23a)"><animate attributeName="cy" values="300;700;300" dur="15s" repeatCount="indefinite"/></circle><circle cx="500" cy="800" r="120" fill="url(%23a)"><animate attributeName="r" values="120;200;120" dur="25s" repeatCount="indefinite"/></circle></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: slideUp 1s ease-out 0.5s forwards;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideUp 1s ease-out 1s forwards;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            opacity: 0;
+            animation: slideUp 1s ease-out 1.5s forwards;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+        }
+        
+        /* Services Grid */
+        .services {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .service-hook {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .service-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .service-clients {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .learn-more-btn {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .learn-more-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Special Offers Section */
+        .special-offers {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 6rem 0;
+            color: white;
+        }
+        
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .offer-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .offer-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .offer-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .download-btn {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Case Studies */
+        .case-studies {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .case-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .case-header {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .case-content {
+            padding: 2rem;
+        }
+        
+        .case-metric {
+            background: #e8f5e8;
+            color: #2d8f47;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Calculator Section */
+        .calculators {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .calc-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .calc-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .calc-form {
+            margin-top: 1.5rem;
+        }
+        
+        .calc-input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        
+        .calc-input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        
+        .calc-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 6rem 0;
+            background: #333;
+            color: white;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .result-box {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .result-box.show {
+            display: block;
+            animation: slideUp 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">🚀 InfraTech Pro</div>
+                <ul class="nav-links">
+                    <li><a href="#services">서비스</a></li>
+                    <li><a href="#checklist">진단도구</a></li>
+                    <li><a href="#cases">사례</a></li>
+                    <li><a href="#calculator">견적</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🛡️ 랜섬웨어로부터<br>99.5% 안전한 IT 인프라</h1>
+                <p class="hero-subtitle">
+                    글로벌 1위 솔루션들로 구성된 프리미엄 IT 인프라 서비스<br>
+                    디지털 전환 성공을 위한 검증된 파트너
+                </p>
+                <a href="#services" class="cta-button">🎯 무료 진단 받기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">🌟 프리미엄 IT 인프라 솔루션</h2>
+            
+            <div class="services-grid">
+                <!-- Veeam -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Veeam 백업 & 복구</h3>
+                    <div class="service-hook">랜섬웨어로부터 99.5% 복구 성공률!</div>
+                    <p class="service-description">
+                        세계 1위 백업 솔루션으로 3분 내 비즈니스 연속성을 보장합니다. 
+                        AI 기반 위협 탐지와 무중단 복구 기능을 제공합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 삼성전자, KB금융그룹, 현대자동차
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- Alibaba Cloud -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">☁️</div>
+                    <h3>Alibaba Cloud</h3>
+                    <div class="service-hook">아시아 1위 클라우드로 30% 비용 절감!</div>
+                    <p class="service-description">
+                        아시아 최대 클라우드 인프라로 글로벌 비즈니스를 가속화합니다. 
+                        중국 진출 시 필수 파트너이며 AI/ML 서비스를 완벽 지원합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 롯데마트, CJ그룹, 두산그룹, 넥슨
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- HCI -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">📦</div>
+                    <h3>하이퍼 컨버지드 인프라</h3>
+                    <div class="service-hook">데이터센터 공간 70% 절약!</div>
+                    <p class="service-description">
+                        컴퓨팅, 스토리지, 네트워킹을 하나로 통합한 차세대 인프라입니다. 
+                        5분 만에 새로운 VM 배포가 가능합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 신한은행, 포스코, 아모레퍼시픽
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- Server -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Dell EMC 서버</h3>
+                    <div class="service-hook">AI 워크로드 최적화! 에너지 효율 40% 향상</div>
+                    <p class="service-description">
+                        차세대 프로세서를 탑재한 고성능 서버로 AI/ML 워크로드를 
+                        완벽 지원하며 전력 효율성을 극대화합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 네이버, 카카오, SKT, 한국전력
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- Storage -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">💾</div>
+                    <h3>Dell EMC 스토리지</h3>
+                    <div class="service-hook">NVMe 올플래시로 10배 빠른 성능!</div>
+                    <p class="service-description">
+                        지연시간 0.2ms 이하의 초고성능 스토리지로 데이터베이스 
+                        성능을 획기적으로 향상시킵니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 우리은행, 현대중공업, LG화학
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- NAS -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">📁</div>
+                    <h3>NAS (Network Attached Storage)</h3>
+                    <div class="service-hook">랜섬웨어 완벽 차단! 페타바이트급 확장</div>
+                    <p class="service-description">
+                        지능형 랜섬웨어 탐지 기능을 내장한 엔터프라이즈급 NAS로 
+                        안전한 파일 공유와 협업을 지원합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 삼성바이오로직스, 하나금융그룹
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- VERITAS NBUA -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔒</div>
+                    <h3>VERITAS NBUA</h3>
+                    <div class="service-hook">백업 스토리지 90% 절약! 중복제거율 95%</div>
+                    <p class="service-description">
+                        글로벌 중복제거 기술로 백업 스토리지 비용을 획기적으로 
+                        절감하는 통합 백업 어플라이언스입니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 국민은행, 포스코케미칼, 대한항공
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- VTL & PLT -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">📼</div>
+                    <h3>VTL & PLT</h3>
+                    <div class="service-hook">테이프 교체 시간 제로! 100배 빠른 복구</div>
+                    <p class="service-description">
+                        가상 테이프 라이브러리로 기존 백업 정책을 유지하면서 
+                        디스크 속도의 복구 성능을 제공합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 한국은행, 국민연금공단, KT
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- CDC X-Log -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔄</div>
+                    <h3>CDC X-Log</h3>
+                    <div class="service-hook">실시간 데이터 동기화! 제로 데이터 손실</div>
+                    <p class="service-description">
+                        마이크로세컨드 단위 실시간 데이터 복제로 비즈니스 연속성을 
+                        보장하는 차세대 CDC 솔루션입니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 신용보증기금, 메리츠증권, 롯데카드
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- Alcatel Lucent -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌐</div>
+                    <h3>Alcatel Lucent</h3>
+                    <div class="service-hook">5G 네트워크 준비 완료! 글로벌 1위 통신장비</div>
+                    <p class="service-description">
+                        차세대 5G 네트워크와 SD-WAN을 지원하는 글로벌 검증된 
+                        네트워크 인프라 솔루션입니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> SKT, KT, LG U+, 한국가스공사
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- L4 Load Balancing -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚖️</div>
+                    <h3>L4 로드 밸런싱</h3>
+                    <div class="service-hook">99.99% 가용성! 초당 백만 TPS 처리</div>
+                    <p class="service-description">
+                        고성능 애플리케이션 전달 컨트롤러로 트래픽 급증 시에도 
+                        안정적인 서비스를 보장합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 배달의민족, 11번가, 티몬, 위메프
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+
+                <!-- SAN Switch -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔗</div>
+                    <h3>SAN Switch</h3>
+                    <div class="service-hook">32Gbps 고속 연결! 제로 패킷 로스</div>
+                    <p class="service-description">
+                        파이버채널 SAN 스위치로 미션 크리티컬 환경에서 
+                        완벽한 무손실 연결을 보장합니다.
+                    </p>
+                    <div class="service-clients">
+                        <strong>주요 고객:</strong> 삼성디스플레이, POSCO ICT, 한국투자증권
+                    </div>
+                    <a href="#" class="learn-more-btn">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="checklist" class="special-offers">
+        <div class="container">
+            <h2 class="section-title fade-in">🎁 무료 사전진단 체크리스트</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;" class="fade-in">
+                전문가가 직접 제작한 셀프 진단 도구로 현재 상태를 점검해보세요
+            </p>
+            
+            <div class="offers-grid">
+                <div class="offer-card fade-in">
+                    <div class="offer-icon">🛡️</div>
+                    <h3>랜섬웨어 복원력 진단</h3>
+                    <p>10가지 핵심 항목으로 랜섬웨어 대응 준비도를 점검하고 개선 방안을 제시합니다.</p>
+                    <button class="download-btn" onclick="downloadChecklist('ransomware')">
+                        📥 무료 다운로드
+                    </button>
+                </div>
+                
+                <div class="offer-card fade-in">
+                    <div class="offer-icon">📁</div>
+                    <h3>NAS 보안 셀프체크</h3>
+                    <p>네트워크 스토리지의 보안 취약점을 사전에 발견하고 보안 강화 방안을 제안합니다.</p>
+                    <button class="download-btn" onclick="downloadChecklist('nas')">
+                        📥 무료 다운로드
+                    </button>
+                </div>
+                
+                <div class="offer-card fade-in">
+                    <div class="offer-icon">⚡</div>
+                    <h3>SAN 성능 체크</h3>
+                    <p>스토리지 네트워크의 성능 병목 구간을 분석하고 최적화 가이드를 제공합니다.</p>
+                    <button class="download-btn" onclick="downloadChecklist('san')">
+                        📥 무료 다운로드
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="cases" class="case-studies">
+        <div class="container">
+            <h2 class="section-title fade-in">📊 업종별 성공 사례</h2>
+            
+            <div class="case-grid">
+                <div class="case-card fade-in">
+                    <div class="case-header">
+                        <h3>🏦 금융권: A은행 디지털 전환</h3>
+                    </div>
+                    <div class="case-content">
+                        <p><strong>과제:</strong> 레거시 시스템 현대화 및 실시간 금융 서비스 구현</p>
+                        <p><strong>솔루션:</strong> HCI + Veeam + CDC X-Log 통합 구축</p>
+                        <br>
+                        <div class="case-metric">가용성 99.99% 달성</div>
+                        <div class="case-metric">신서비스 출시 70% 단축</div>
+                        <div class="case-metric">운영비용 45% 절감</div>
+                    </div>
+                </div>
+                
+                <div class="case-card fade-in">
+                    <div class="case-header">
+                        <h3>🏭 제조업: B그룹 스마트팩토리</h3>
+                    </div>
+                    <div class="case-content">
+                        <p><strong>과제:</strong> 다국가 공장 데이터 통합 및 실시간 모니터링</p>
+                        <p><strong>솔루션:</strong> Alibaba Cloud + NAS + L4 로드밸런서</p>
+                        <br>
+                        <div class="case-metric">생산성 25% 향상</div>
+                        <div class="case-metric">품질 불량률 50% 감소</div>
+                        <div class="case-metric">운영비 35% 절감</div>
+                    </div>
+                </div>
+                
+                <div class="case-card fade-in">
+                    <div class="case-header">
+                        <h3>🏛️ 공공기관: C청 클라우드 전환</h3>
+                    </div>
+                    <div class="case-content">
+                        <p><strong>과제:</strong> 보안성과 효율성을 고려한 하이브리드 클라우드 구축</p>
+                        <p><strong>솔루션:</strong> 서버 + 스토리지 + VERITAS NBUA</p>
+                        <br>
+                        <div class="case-metric">IT 운영비 40% 절감</div>
+                        <div class="case-metric">민원처리 60% 단축</div>
+                        <div class="case-metric">보안등급 A 획득</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Calculator -->
+    <section id="calculator" class="calculators">
+        <div class="container">
+            <h2 class="section-title fade-in">💰 비용 계산기</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;" class="fade-in">
+                간단한 정보 입력으로 예상 비용을 즉시 확인하세요
+            </p>
+            
+            <div class="calc-grid">
+                <!-- HCI Calculator -->
+                <div class="calc-card fade-in">
+                    <h3>🏢 HCI 노드 계산기</h3>
+                    <p>필요한 VM 수량과 성능 요구사항을 입력하면 최적의 HCI 구성을 제안합니다.</p>
+                    
+                    <div class="calc-form">
+                        <input type="number" class="calc-input" placeholder="VM 수량" id="hci-vms">
+                        <input type="number" class="calc-input" placeholder="총 CPU 코어 수" id="hci-cpu">
+                        <input type="number" class="calc-input" placeholder="총 메모리 (GB)" id="hci-memory">
+                        <input type="number" class="calc-input" placeholder="스토리지 용량 (TB)" id="hci-storage">
+                        <button class="calc-btn" onclick="calculateHCI()">💡 견적 계산하기</button>
+                        
+                        <div id="hci-result" class="result-box">
+                            <h4>🎯 추천 구성</h4>
+                            <div id="hci-details"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backup Calculator -->
+                <div class="calc-card fade-in">
+                    <h3>💾 백업 보존주기 계산기</h3>
+                    <p>백업 용량과 보존 정책에 따른 스토리지 요구사항과 비용을 계산합니다.</p>
+                    
+                    <div class="calc-form">
+                        <input type="number" class="calc-input" placeholder="일일 백업 용량 (GB)" id="backup-daily">
+                        <select class="calc-input" id="backup-retention">
+                            <option value="30">30일 보존</option>
+                            <option value="90">90일 보존</option>
+                            <option value="365">1년 보존</option>
+                            <option value="1095">3년 보존</option>
+                            <option value="1825">5년 보존</option>
+                        </select>
+                        <select class="calc-input" id="backup-compression">
+                            <option value="3">일반 압축 (3:1)</option>
+                            <option value="5">고압축 (5:1)</option>
+                            <option value="10">중복제거+압축 (10:1)</option>
+                        </select>
+                        <button class="calc-btn" onclick="calculateBackup()">💡 견적 계산하기</button>
+                        
+                        <div id="backup-result" class="result-box">
+                            <h4>📊 백업 스토리지 요구사항</h4>
+                            <div id="backup-details"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Object Storage Calculator -->
+                <div class="calc-card fade-in">
+                    <h3>☁️ 오브젝트 스토리지 견적</h3>
+                    <p>클라우드 오브젝트 스토리지 사용량과 비용을 예측하고 최적화 방안을 제시합니다.</p>
+                    
+                    <div class="calc-form">
+                        <input type="number" class="calc-input" placeholder="초기 데이터 용량 (TB)" id="obj-initial">
+                        <input type="number" class="calc-input" placeholder="월 증가률 (%)" id="obj-growth">
+                        <select class="calc-input" id="obj-tier">
+                            <option value="hot">Hot Storage (자주 접근)</option>
+                            <option value="cool">Cool Storage (가끔 접근)</option>
+                            <option value="archive">Archive (보관용)</option>
+                        </select>
+                        <button class="calc-btn" onclick="calculateObjectStorage()">💡 견적 계산하기</button>
+                        
+                        <div id="obj-result" class="result-box">
+                            <h4>💰 월간 예상 비용</h4>
+                            <div id="obj-details"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">📞 전문가와 상담하기</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;" class="fade-in">
+                IT 인프라 전문가가 맞춤형 솔루션을 제안해드립니다
+            </p>
+            
+            <form class="contact-form fade-in" onsubmit="submitInquiry(event)">
+                <div class="form-group">
+                    <label for="service">관심 서비스 *</label>
+                    <select id="service" class="form-select" required>
+                        <option value="">서비스를 선택하세요</option>
+                        <option value="veeam">Veeam 백업 & 복구</option>
+                        <option value="alibaba">Alibaba Cloud</option>
+                        <option value="hci">하이퍼 컨버지드 인프라(HCI)</option>
+                        <option value="server">Dell EMC 서버</option>
+                        <option value="storage">Dell EMC 스토리지</option>
+                        <option value="nas">NAS</option>
+                        <option value="veritas">VERITAS NBUA</option>
+                        <option value="vtl">VTL & PLT</option>
+                        <option value="cdc">CDC X-Log</option>
+                        <option value="alcatel">Alcatel Lucent</option>
+                        <option value="l4">L4 로드밸런싱</option>
+                        <option value="san">SAN Switch</option>
+                        <option value="multiple">여러 서비스</option>
+                    </select>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="company">회사명 *</label>
+                        <input type="text" id="company" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">담당자명 *</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="phone">연락처 *</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일 *</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="budget">예산 범위</label>
+                        <select id="budget" class="form-select">
+                            <option value="">선택하세요</option>
+                            <option value="under-50m">5천만원 미만</option>
+                            <option value="50m-100m">5천만원 ~ 1억원</option>
+                            <option value="100m-500m">1억원 ~ 5억원</option>
+                            <option value="over-500m">5억원 이상</option>
+                            <option value="consulting">컨설팅 필요</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">도입 희망시기</label>
+                        <select id="timeline" class="form-select">
+                            <option value="">선택하세요</option>
+                            <option value="immediate">즉시</option>
+                            <option value="1month">1개월 이내</option>
+                            <option value="3months">3개월 이내</option>
+                            <option value="6months">6개월 이내</option>
+                            <option value="planning">기획 단계</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">문의 내용</label>
+                    <textarea id="message" class="form-input" rows="5" 
+                              placeholder="현재 IT 인프라 현황, 해결하고 싶은 문제, 궁금한 점 등을 자유롭게 적어주세요."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    🚀 전문가 상담 신청하기
+                </button>
+                
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                    ✅ 1시간 내 전문가가 연락드립니다 | ✅ 무료 현장 방문 진단 가능
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 InfraTech Pro. All rights reserved.</p>
+            <p>🏢 대전광역시 | 📞 042-XXX-XXXX | 📧 info@infratech.co.kr</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                Veeam Platinum Partner | Dell EMC Titanium Partner | Alibaba Cloud Advanced Partner
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Download Checklist Function
+        function downloadChecklist(type) {
+            const checklistData = {
+                ransomware: {
+                    title: '랜섬웨어 복원력 진단 체크리스트',
+                    questions: [
+                        '현재 백업 주기는 얼마나 되시나요?',
+                        '백업 데이터의 무결성을 정기적으로 검증하시나요?',
+                        '오프라인 백업(Air-gap) 정책을 운영하고 계시나요?',
+                        '랜섬웨어 탐지 솔루션을 도입하셨나요?',
+                        '복구 테스트를 정기적으로 수행하시나요?',
+                        '임원진 대상 보안 교육을 실시하시나요?',
+                        '네트워크 세그멘테이션이 구현되어 있나요?',
+                        '제로 트러스트 보안 모델을 적용하셨나요?',
+                        '사고 대응 플레이북이 준비되어 있나요?',
+                        '사이버 보험에 가입하셨나요?'
+                    ]
+                },
+                nas: {
+                    title: 'NAS 보안 셀프체크 리스트',
+                    questions: [
+                        'NAS 접근 권한 관리가 체계적으로 이루어지고 있나요?',
+                        '정기적인 보안 패치 업데이트를 수행하시나요?',
+                        '다중 인증(MFA) 기능을 사용하고 계시나요?',
+                        '파일 암호화 기능을 활성화하셨나요?',
+                        '스냅샷 정책이 설정되어 있나요?',
+                        '외부 접속에 대한 보안 정책이 있나요?',
+                        '사용자별 권한 분리가 명확하게 구분되어 있나요?',
+                        '감사 로그 모니터링을 수행하고 계시나요?',
+                        '백업 및 복구 테스트를 정기적으로 실시하나요?',
+                        '랜섬웨어 보호 기능을 활성화하셨나요?'
+                    ]
+                },
+                san: {
+                    title: 'SAN 성능 체크 리스트',
+                    questions: [
+                        '현재 SAN의 평균 IOPS는 어느 정도인가요?',
+                        '지연시간(Latency) 모니터링을 수행하시나요?',
+                        '대역폭 사용률이 80%를 초과하는 경우가 있나요?',
+                        '다중 경로(Multipathing) 설정이 올바르게 구성되어 있나요?',
+                        '정기적인 성능 베이스라인 측정을 하시나요?',
+                        'HBA 카드 및 케이블 상태를 점검하시나요?',
+                        '존(Zone) 설정이 최적화되어 있나요?',
+                        '스위치 포트 사용률을 모니터링하시나요?',
+                        '스토리지 배열의 캐시 활용률은 적절한가요?',
+                        '향후 3년간 용량 확장 계획이 수립되어 있나요?'
+                    ]
+                }
+            };
+
+            // 실제 구현에서는 사용자 정보를 먼저 수집한 후 다운로드 제공
+            const userEmail = prompt('체크리스트 다운로드를 위해 이메일을 입력해주세요:');
+            if (userEmail && userEmail.includes('@')) {
+                // Airtable에 다운로드 기록 저장 (실제 구현 시)
+                alert(`✅ ${checklistData[type].title}가 ${userEmail}로 발송되었습니다.\n\n전문가 분석 리포트는 1영업일 내 추가 발송됩니다.`);
+            }
+        }
+
+        // HCI Calculator
+        function calculateHCI() {
+            const vms = parseInt(document.getElementById('hci-vms').value) || 0;
+            const cpu = parseInt(document.getElementById('hci-cpu').value) || 0;
+            const memory = parseInt(document.getElementById('hci-memory').value) || 0;
+            const storage = parseInt(document.getElementById('hci-storage').value) || 0;
+
+            if (vms === 0 || cpu === 0 || memory === 0 || storage === 0) {
+                alert('모든 필드를 입력해주세요.');
+                return;
+            }
+
+            // 노드 계산 로직
+            const cpuPerNode = 40; // 코어
+            const memoryPerNode = 384; // GB
+            const storagePerNode = 10; // TB
+
+            const nodesForCpu = Math.ceil(cpu / cpuPerNode);
+            const nodesForMemory = Math.ceil(memory / memoryPerNode);
+            const nodesForStorage = Math.ceil(storage / storagePerNode);
+            const recommendedNodes = Math.max(nodesForCpu, nodesForMemory, nodesForStorage, 3); // 최소 3노드
+
+            const estimatedCost = recommendedNodes * 80000000; // 노드당 8천만원 가정
+            const monthlyCost = estimatedCost * 0.1; // 월 리스 비용
+
+            const resultDiv = document.getElementById('hci-result');
+            const detailsDiv = document.getElementById('hci-details');
+            
+            detailsDiv.innerHTML = `
+                <p><strong>권장 노드 수:</strong> ${recommendedNodes}개</p>
+                <p><strong>총 성능:</strong> ${recommendedNodes * cpuPerNode}코어, ${recommendedNodes * memoryPerNode}GB RAM, ${recommendedNodes * storagePerNode}TB</p>
+                <p><strong>예상 구축비용:</strong> ${estimatedCost.toLocaleString()}원</p>
+                <p><strong>월 리스 비용:</strong> ${monthlyCost.toLocaleString()}원</p>
+                <p style="color: #4caf50; font-weight: bold; margin-top: 1rem;">💡 기존 인프라 대비 60% 운영비 절감 예상</p>
+            `;
+            
+            resultDiv.classList.add('show');
+        }
+
+        // Backup Calculator
+        function calculateBackup() {
+            const daily = parseInt(document.getElementById('backup-daily').value) || 0;
+            const retention = parseInt(document.getElementById('backup-retention').value) || 30;
+            const compression = parseInt(document.getElementById('backup-compression').value) || 3;
+
+            if (daily === 0) {
+                alert('일일 백업 용량을 입력해주세요.');
+                return;
+            }
+
+            const totalDataGB = daily * retention;
+            const compressedDataGB = totalDataGB / compression;
+            const compressedDataTB = compressedDataGB / 1024;
+            
+            const costPerTB = 2000000; // TB당 200만원 가정
+            const totalCost = compressedDataTB * costPerTB;
+            const monthlyCost = totalCost * 0.05; // 월 운영비
+
+            const resultDiv = document.getElementById('backup-result');
+            const detailsDiv = document.getElementById('backup-details');
+            
+            detailsDiv.innerHTML = `
+                <p><strong>원본 데이터:</strong> ${totalDataGB.toLocaleString()}GB</p>
+                <p><strong>압축 후 용량:</strong> ${compressedDataTB.toFixed(2)}TB</p>
+                <p><strong>스토리지 절약:</strong> ${((totalDataGB - compressedDataGB) / totalDataGB * 100).toFixed(1)}%</p>
+                <p><strong>구축 비용:</strong> ${totalCost.toLocaleString()}원</p>
+                <p><strong>월 운영비:</strong> ${monthlyCost.toLocaleString()}원</p>
+                <p style="color: #4caf50; font-weight: bold; margin-top: 1rem;">💡 중복제거로 ${compression}배 용량 절약!</p>
+            `;
+            
+            resultDiv.classList.add('show');
+        }
+
+        // Object Storage Calculator
+        function calculateObjectStorage() {
+            const initial = parseInt(document.getElementById('obj-initial').value) || 0;
+            const growth = parseInt(document.getElementById('obj-growth').value) || 0;
+            const tier = document.getElementById('obj-tier').value;
+
+            if (initial === 0) {
+                alert('초기 데이터 용량을 입력해주세요.');
+                return;
+            }
+
+            const tierPrices = {
+                hot: 50000,    // TB당 월 5만원
+                cool: 25000,   // TB당 월 2.5만원
+                archive: 10000 // TB당 월 1만원
+            };
+
+            const pricePerTB = tierPrices[tier] || tierPrices.hot;
+            const currentCost = initial * pricePerTB;
+            
+            // 1년 후 예상 용량 및 비용
+            const futureCapacity = initial * Math.pow(1 + growth/100, 12);
+            const futureCost = futureCapacity * pricePerTB;
+
+            const resultDiv = document.getElementById('obj-result');
+            const detailsDiv = document.getElementById('obj-details');
+            
+            detailsDiv.innerHTML = `
+                <p><strong>현재 월 비용:</strong> ${currentCost.toLocaleString()}원</p>
+                <p><strong>1년 후 예상 용량:</strong> ${futureCapacity.toFixed(2)}TB</p>
+                <p><strong>1년 후 월 비용:</strong> ${futureCost.toLocaleString()}원</p>
+                <p><strong>연간 총 비용:</strong> ${(currentCost * 12 + (futureCost - currentCost) * 6).toLocaleString()}원</p>
+                <p style="color: #4caf50; font-weight: bold; margin-top: 1rem;">💡 온프레미스 대비 40% 비용 절감 가능!</p>
+            `;
+            
+            resultDiv.classList.add('show');
+        }
+
+        // Contact Form Submission
+        function submitInquiry(event) {
+            event.preventDefault();
+            
+            const formData = {
+                service: document.getElementById('service').value,
+                company: document.getElementById('company').value,
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                budget: document.getElementById('budget').value,
+                timeline: document.getElementById('timeline').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+
+            // 실제 구현에서는 Airtable API 또는 Softr 폼 연동
+            console.log('Form Data:', formData);
+            
+            // 성공 메시지
+            alert(`✅ 문의가 성공적으로 접수되었습니다!\n\n${formData.name}님, 1시간 내에 전문가가 ${formData.phone}로 연락드리겠습니다.\n\n📧 상세 자료는 ${formData.email}로 발송됩니다.`);
+            
+            // 폼 초기화
+            event.target.reset();
+        }
+
+        // Google Analytics 추적 (실제 구현 시)
+        function trackEvent(action, category, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: label
+                });
+            }
+        }
+
+        // 페이지 로드 시 이벤트 리스너 추가
+        document.addEventListener('DOMContentLoaded', function() {
+            // 다운로드 버튼 클릭 추적
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    trackEvent('download', 'checklist', this.textContent);
+                });
+            });
+
+            // 서비스 카드 클릭 추적
+            document.querySelectorAll('.learn-more-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
+                    trackEvent('click', 'service_detail', serviceTitle);
+                });
+            });
+
+            // 계산기 사용 추적
+            document.querySelectorAll('.calc-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const calcType = this.closest('.calc-card').querySelector('h3').textContent;
+                    trackEvent('calculate', 'cost_calculator', calcType);
+                });
+            });
+        });
+
+        // 스크롤 진행률 추적
+        let scrollProgress = 0;
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = Math.round((winScroll / height) * 100);
+            
+            // 25%, 50%, 75%, 100% 스크롤 시 추적
+            if (scrolled >= 25 && scrollProgress < 25) {
+                trackEvent('scroll', 'engagement', '25%');
+                scrollProgress = 25;
+            } else if (scrolled >= 50 && scrollProgress < 50) {
+                trackEvent('scroll', 'engagement', '50%');
+                scrollProgress = 50;
+            } else if (scrolled >= 75 && scrollProgress < 75) {
+                trackEvent('scroll', 'engagement', '75%');
+                scrollProgress = 75;
+            } else if (scrolled >= 100 && scrollProgress < 100) {
+                trackEvent('scroll', 'engagement', '100%');
+                scrollProgress = 100;
+            }
+        });
+
+        // 마우스 오버 시 서비스 카드 정보 미리보기
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.service-icon');
+                icon.style.transform = 'scale(1.1) rotate(5deg)';
+                icon.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.service-icon');
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // 실시간 시계 및 접속자 시뮬레이션 (신뢰도 증가용)
+        function updateLiveStats() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('ko-KR');
+            
+            // 랜덤 접속자 수 생성 (100-500명)
+            const visitors = Math.floor(Math.random() * 400) + 100;
+            
+            // 하단에 실시간 정보 표시 (실제 구현 시)
+            console.log(`현재 시간: ${timeStr}, 실시간 방문자: ${visitors}명`);
+        }
+
+        // 5초마다 업데이트
+        setInterval(updateLiveStats, 5000);
+
+        // 채팅 상담 버튼 (플로팅)
+        function createChatButton() {
+            const chatBtn = document.createElement('div');
+            chatBtn.innerHTML = `
+                <div style="
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    background: linear-gradient(45deg, #25d366, #128c7e);
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+                    z-index: 1001;
+                    font-weight: bold;
+                    animation: pulse 2s infinite;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='scale(1.05)'" 
+                   onmouseout="this.style.transform='scale(1)'"
+                   onclick="openChat()">
+                    💬 실시간 상담
+                </div>
+                <style>
+                    @keyframes pulse {
+                        0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+                        50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8); }
+                        100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+                    }
+                </style>
+            `;
+            document.body.appendChild(chatBtn);
+        }
+
+        function openChat() {
+            // 실제 구현에서는 채팅 위젯 연동 (카카오톡, 인터콤 등)
+            const phone = '010-XXXX-XXXX';
+            const message = encodeURIComponent('안녕하세요! IT 인프라 솔루션에 대해 상담 받고 싶습니다.');
+            window.open(`https://wa.me/82${phone.replace(/[^0-9]/g, '').substring(1)}?text=${message}`, '_blank');
+        }
+
+        // 페이지 로드 완료 후 채팅 버튼 생성
+        window.addEventListener('load', createChatButton);
+
+        // 봇 방지 및 보안 강화
+        document.addEventListener('contextmenu', function(e) {
+            // 우클릭 방지 (선택사항)
+            // e.preventDefault();
+        });
+
+        // 폼 스팸 방지
+        let formSubmitCount = 0;
+        const maxSubmits = 3; // 5분 내 최대 3회 제출
+
+        function preventSpam() {
+            formSubmitCount++;
+            setTimeout(() => {
+                formSubmitCount--;
+            }, 300000); // 5분
+
+            return formSubmitCount <= maxSubmits;
+        }
+
+        // 키워드 하이라이팅 (SEO 강화)
+        function highlightKeywords() {
+            const keywords = ['랜섬웨어', '백업', '클라우드', 'AI', '보안', 'IT인프라'];
+            const textNodes = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+
+            let node;
+            while (node = textNodes.nextNode()) {
+                let text = node.textContent;
+                keywords.forEach(keyword => {
+                    if (text.includes(keyword)) {
+                        const regex = new RegExp(`(${keyword})`, 'gi');
+                        const highlightedText = text.replace(regex, '<mark style="background: rgba(255, 235, 59, 0.3); padding: 1px 2px; border-radius: 2px;">$1</mark>');
+                        if (highlightedText !== text) {
+                            const span = document.createElement('span');
+                            span.innerHTML = highlightedText;
+                            node.parentNode.replaceChild(span, node);
+                        }
+                    }
+                });
+            }
+        }
+
+        // 지연 로딩으로 성능 최적화
+        setTimeout(highlightKeywords, 2000);
+    </script>
+
+    <!-- Google Analytics 4 (실제 구현 시 교체) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
+
+    <!-- 구조화된 데이터 (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "InfraTech Pro",
+        "description": "프리미엄 IT 인프라 솔루션 전문기업",
+        "url": "https://www.infratech.co.kr",
+        "logo": "https://www.infratech.co.kr/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+82-42-XXX-XXXX",
+            "contactType": "sales",
+            "areaServed": "KR",
+            "availableLanguage": "Korean"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "대전",
+            "addressCountry": "KR"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Veeam 백업 솔루션",
+                    "description": "랜섬웨어 보호 99.5% 성공률의 백업 및 복구 서비스"
+                }
+            },
+            {
+                "@type": "Offer", 
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Alibaba Cloud",
+                    "description": "아시아 1위 클라우드 인프라 서비스"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Facebook Pixel (실제 구현 시) -->
+    <!-- <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'FACEBOOK_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script> -->
+
+</body>
+</html>
